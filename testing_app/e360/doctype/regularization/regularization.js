@@ -26,3 +26,31 @@
             }
         }
     });
+
+
+// total Hours calculation using check-in and check-out
+    frappe.ui.form.on('Regularization', {
+        check_in: function (frm) {
+            calculate_total_hours(frm);
+        },
+        check_out: function (frm) {
+            calculate_total_hours(frm);
+        }
+    });
+    
+    function calculate_total_hours(frm) {
+        if (frm.doc.check_in && frm.doc.check_out) {
+            const from_datetime = frappe.datetime.str_to_obj(frm.doc.check_in);
+            const to_datetime = frappe.datetime.str_to_obj(frm.doc.check_out);
+    
+            // Calculate the difference in milliseconds
+            const diff_in_ms = to_datetime - from_datetime;
+    
+            // Convert milliseconds to hours
+            const hours = diff_in_ms / (1000 * 60 * 60);
+    
+            // Display as a string with up to 2 decimal places
+            frm.set_value('total_hours', hours > 0 ? `${hours.toFixed(2)} hours` : '0 hours');
+        }
+    }
+    

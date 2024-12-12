@@ -10,6 +10,7 @@
   "attendance_date",
   "check_in",
   "check_out",
+  "total_hours",
   "status",
   "description",
   "admins_comment"
@@ -72,11 +73,18 @@
    "fieldtype": "Data",
    "label": "Admin's Comment",
    "permlevel": 1
+  },
+  {
+   "fieldname": "total_hours",
+   "fieldtype": "Data",
+   "label": "Total Hours",
+   "read_only": 1,
+   "set_only_once": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-11 15:26:20.944934",
+ "modified": "2024-12-12 12:59:01.174179",
  "modified_by": "Administrator",
  "module": "E360",
  "name": "Regularization",
