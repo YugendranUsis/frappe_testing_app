@@ -76,12 +76,14 @@
   {
    "fieldname": "total_days_of_leave",
    "fieldtype": "Int",
-   "label": "Total Days of Leave"
+   "label": "Total Days of Leave",
+   "read_only": 1,
+   "set_only_once": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-11 15:26:03.320746",
+ "modified": "2024-12-12 12:59:19.199942",
  "modified_by": "Administrator",
  "module": "E360",
  "name": "Leave_Request",
