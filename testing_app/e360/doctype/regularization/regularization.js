@@ -58,5 +58,6 @@
     
  frappe.ui.form.on("Regularization", {
         onload: function(frm) {
+            print 
         }
     });
