@@ -56,14 +56,4 @@
 
 
     
- frappe.ui.form.on("Regularization", {
-        onload: function(frm) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            print 
-=======
->>>>>>> parent of e64a3c1 (Revert "faulttesting")
-=======
->>>>>>> parent of e64a3c1 (Revert "faulttesting")
-        }
-    });
+ 
