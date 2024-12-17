@@ -8,6 +8,7 @@
   "employee_id",
   "employee_name",
   "attendance_date",
+  "reason",
   "check_in",
   "check_out",
   "total_hours",
@@ -37,6 +38,7 @@
    "fieldname": "attendance_date",
    "fieldtype": "Date",
    "label": "Attendance Date",
+   "reqd": 1,
    "set_only_once": 1
   },
   {
@@ -44,6 +46,7 @@
    "fieldtype": "Datetime",
    "in_list_view": 1,
    "label": "Check In",
+   "reqd": 1,
    "set_only_once": 1
   },
   {
@@ -51,6 +54,7 @@
    "fieldtype": "Datetime",
    "in_list_view": 1,
    "label": "Check Out",
+   "reqd": 1,
    "set_only_once": 1
   },
   {
@@ -66,6 +70,7 @@
    "fieldname": "description",
    "fieldtype": "Data",
    "label": "Description",
+   "reqd": 1,
    "set_only_once": 1
   },
   {
@@ -80,11 +85,19 @@
    "label": "Total Hours",
    "read_only": 1,
    "set_only_once": 1
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Select",
+   "label": "Reason",
+   "options": "Forgot to check-in\nForgot to check-out",
+   "reqd": 1,
+   "set_only_once": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-12 12:59:01.174179",
+ "modified": "2024-12-17 11:29:00.222031",
  "modified_by": "Administrator",
  "module": "E360",
  "name": "Regularization",

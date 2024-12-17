@@ -53,4 +53,4 @@
             frm.set_value('total_hours', hours > 0 ? `${hours.toFixed(2)} hours` : '0 hours');
         }
     }
-    
+
