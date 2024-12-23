@@ -133,23 +133,29 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"testing_app.tasks.all"
-# 	],
-# 	"daily": [
-# 		"testing_app.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"testing_app.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"testing_app.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"testing_app.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+      "cron": {
+        "*/1 * * * *": [
+            "testing_app.tasks.cron"
+        ]
+    }
+	# "all": [
+	# 	"testing_app.tasks.all"
+	# ],
+   
+	# "daily": [
+	# 	"testing_app.tasks.daily"
+	# ],
+	# "hourly": [
+	# 	"testing_app.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"testing_app.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"testing_app.tasks.monthly"
+	# ],
+}
 
 # Testing
 # -------
