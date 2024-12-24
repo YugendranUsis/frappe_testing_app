@@ -134,11 +134,16 @@ app_license = "mit"
 # ---------------
 
 scheduler_events = {
-      "cron": {
+
+	"all": [
+        "testing_app.tasks.flush_email_queue"
+    ],
+    "cron": {
         "* * * * *": [
-            "testing_app.tasks.cron"
+            "testing_app.tasks.flush_email_queue"
         ]
     }
+}
 	# "all": [
 	# 	"testing_app.tasks.all"
 	# ],
@@ -155,7 +160,7 @@ scheduler_events = {
 	# "monthly": [
 	# 	"testing_app.tasks.monthly"
 	# ],
-}
+#}
 
 # Testing
 # -------

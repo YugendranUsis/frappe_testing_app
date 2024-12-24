@@ -1,15 +1,14 @@
 import frappe
-import logging
+from frappe.email.queue import flush
 
 def cron():
-    # Add logging for task execution
-    logging.info("Cron task started.")
-    
-    # Your task logic here
-    print("\n\nTask executed successfully\n\n")
-    
-    # Enqueue the email flush
-    frappe.enqueue(method="frappe.email.queue.flush", queue="default", timeout=300, is_async=True)
-    
-    logging.info("Email queue flush enqueued.")
-    print("\n\nTask executed successfully\n\n")
+    try:
+        # Flush the email queue
+        flush()
+        frappe.logger().info("Email queue flushed successfully.")
+    except Exception as e:
+        frappe.logger().error(f"Error flushing email queue: {e}")
+
+# This function will be called by the cron job
+def flush_email_queue():
+    cron()  # Corrected to 'cron()' instead of 'corn()'
